@@ -1,4 +1,5 @@
 var strategy = {
+	
 	quickStrategy: {
 		whereToPark: function (parkThings) {
 			for (var i = 0; i < parkThings.length; i++) {
@@ -10,6 +11,7 @@ var strategy = {
 			return null;
 		}
 	},
+	
 	vacancyRateStrategy: {
 		whereToPark: function (parkThings) {
 			var rateArray = parkThings.map(function (parkThing) {

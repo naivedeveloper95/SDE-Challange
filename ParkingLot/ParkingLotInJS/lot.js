@@ -1,18 +1,21 @@
-import Ticket from "./ticket";
+import Ticket from "./ticket";  //Importing ticket module.
 
-class Lot {
+class Lot {              //Creating Lot class to compute car parking.
 	constructor(capability) {
 		this._capability = capability || 0;
 		this._restCapability = capability;
 		this._cars = [];
 		this._tickets = [];
 	}
+
 	restCapability() {
 		return this._restCapability;
 	}
+
 	capability() {
 		return this._capability;
 	}
+
 	park(car) {
 		if (this._restCapability > 0) {
 			this._restCapability--;
@@ -24,6 +27,7 @@ class Lot {
 		}
 		return null;
 	}
+
 	fetchCar(ticket) {
 		this._capability++;
 		var carIndex = this._tickets.indexOf(ticket);
@@ -36,9 +40,4 @@ class Lot {
 }
 
 Lot.prototype.constructor = Lot;
-
-
-
-
-
 export default Lot;
